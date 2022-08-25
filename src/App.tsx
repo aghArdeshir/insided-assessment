@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { AccessTokenInputModal } from "./AccessTokenInputModal";
+import { ButtonWithKeyIcon } from "./RemoveMyAccessKeyButton";
 import { accessTokenService } from "./services/accessTokenService";
 
 function App() {
   const [accessToken, setAccessToken] = useState<string | null>(
     accessTokenService.getAccessToken()
   );
+
+  const removeAccessToken = useCallback(() => {
+    accessTokenService.removeAccessToken();
+    setAccessToken(null);
+  }, []);
 
   useEffect(() => {
     if (accessToken) {
@@ -17,7 +23,11 @@ function App() {
     return <AccessTokenInputModal onSubmit={setAccessToken} />;
   }
 
-  return <div />;
+  return (
+    <div>
+      <ButtonWithKeyIcon onClick={removeAccessToken} />
+    </div>
+  );
 }
 
 export default App;

@@ -8,6 +8,10 @@ class AccessTokenService {
   getAccessToken() {
     return localStorage.getItem(lsKey);
   }
+
+  removeAccessToken() {
+    localStorage.removeItem(lsKey);
+  }
 }
 
 export const accessTokenService = new AccessTokenService();
