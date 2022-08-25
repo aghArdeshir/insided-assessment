@@ -13,4 +13,5 @@
   compatibility issues as this is not a real-world production app. If there is
   any problem on your browser and you need it, just open an issue and I'll take
   care of it
-
+- I did not do full-blown error handling, but just a little for demonstration
+  purposes. Try adding invalid access token key
