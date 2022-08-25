@@ -9,4 +9,8 @@
 - I chose not to use any UI/CSS library as I believe pure CSS is a good choice
   for such a minimal project (I just ignored browser-compatability issues that
   might rise due to this choice)
+- I used `display: grid` and `dialog` HTML element and just ignored any
+  compatibility issues as this is not a real-world production app. If there is
+  any problem on your browser and you need it, just open an issue and I'll take
+  care of it
 
