@@ -1,4 +1,5 @@
 import { Octokit } from "octokit";
+import { ERRORS } from "../constants/errors";
 import { accessTokenService } from "./accessTokenService";
 
 export async function fetchCommits() {
@@ -8,8 +9,18 @@ export async function fetchCommits() {
     auth: accessTokenService.getAccessToken(),
   });
 
-  await octokit.request("GET /repos/{owner}/{repo}/commits", {
-    owner: "aghArdeshir",
-    repo: "insided-assessment",
-  });
+  try {
+    return (
+      await octokit.request("GET /repos/{owner}/{repo}/commits", {
+        owner: "aghArdeshir",
+        repo: "insided-assessment",
+      })
+    ).data;
+  } catch (e: any) {
+    if (e.status === 401) {
+      throw ERRORS.INVALID_TOKEN;
+    } else {
+      throw e;
+    }
+  }
 }
