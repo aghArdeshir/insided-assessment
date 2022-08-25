@@ -7,7 +7,7 @@ type Props = {
 };
 
 const CornerButton = styled.button`
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
 `;
