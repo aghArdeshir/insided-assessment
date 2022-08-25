@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { AccessTokenInputModal } from "./AccessTokenInputModal";
-import { accessTokenServiec } from "./services/accessTokenService";
+import { accessTokenService } from "./services/accessTokenService";
 
 function App() {
   const [accessToken, setAccessToken] = useState<string | null>(
-    accessTokenServiec.getAccessToken()
+    accessTokenService.getAccessToken()
   );
 
   useEffect(() => {
     if (accessToken) {
-      accessTokenServiec.setAccessToken(accessToken);
+      accessTokenService.setAccessToken(accessToken);
     }
   }, [accessToken]);
 

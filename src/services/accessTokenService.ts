@@ -10,4 +10,4 @@ class AccessTokenService {
   }
 }
 
-export const accessTokenServiec = new AccessTokenService();
+export const accessTokenService = new AccessTokenService();
