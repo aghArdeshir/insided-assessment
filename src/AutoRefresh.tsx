@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { ONE_SECOND } from "./services/dateService";
 
 const AUTO_REFRESH_INTERVAL_IN_SECONDS = Number(
   process.env.REACT_APP_AUTO_REFRESH_INTERVAL_IN_SECONDS
 );
-const ONE_SECOND = 1000;
 
 type Props = {
   onRefresh: () => void;

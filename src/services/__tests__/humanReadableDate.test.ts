@@ -1,6 +1,4 @@
-import { getHumanReadableDate } from "../dateService";
-
-const ONE_SECOND = 1000;
+import { getHumanReadableDate, ONE_SECOND } from "../dateService";
 
 test("identifies right now", () => {
   expect(getHumanReadableDate(new Date())).toBe("Just now");
@@ -24,7 +22,9 @@ test("identifies 75 seconds as 1 minute ago and 60*30 seconds as 30 minutes ago"
 
 test("identifies 3 hours ago correctly", () => {
   expect(
-    getHumanReadableDate(new Date(new Date().getTime() - 60 * 60 * 3 * ONE_SECOND))
+    getHumanReadableDate(
+      new Date(new Date().getTime() - 60 * 60 * 3 * ONE_SECOND)
+    )
   ).toBe("3 hours ago");
 });
 

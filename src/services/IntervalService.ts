@@ -1,4 +1,4 @@
-const ONE_SECOND = 1000;
+import { ONE_SECOND } from "./dateService";
 
 /**
  * This service is meant to run only one `setInterval` to call too many
