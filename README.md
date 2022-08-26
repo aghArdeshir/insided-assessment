@@ -14,21 +14,20 @@
   any problem on your browser and you need it, just open an issue and I'll take
   care of it
 - I did not do full-blown error handling, but just a little for demonstration
-  purposes. Try adding invalid access token key
+  purposes. Try adding invalid access token key or disconnect from internet
 - I used inline styles here and there exactly for no reason!
 - I did not use routing as the application did not need it. I just used a
   state-machine-like thing (bunch of if and else ifs to be honest)
 - I relied on browser date just for simplicity
 
-TODO:
-
-- Unify Props types
-
-# If it was a real-world actual product:
+# If it was a real-world actual product or I had more time:
 
 - I would definitely set up prettier and eslint with customized rules so
   conflicts won't appear because of non-logical/non-business reasons
 - We would calculated dates on server instead of relying on client-side, or at
   least pass server date to client
 - We would have pagination instead of loading all commits at once
-
+- We couldprovide a way to let the user be able to change repository to show
+  commits
+- We would setup more beautiful error handling apges (use internet for
+  inspiration or employ a UI/UX designer)
