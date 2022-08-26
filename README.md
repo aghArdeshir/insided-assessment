@@ -22,7 +22,7 @@
 
 TODO:
 
-- Show human-readable dates (like 2 minutes ago)
+- Unify Props types
 
 # If it was a real-world actual product:
 
@@ -31,3 +31,4 @@ TODO:
 - We would calculated dates on server instead of relying on client-side, or at
   least pass server date to client
 - We would have pagination instead of loading all commits at once
+

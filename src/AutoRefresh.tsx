@@ -7,9 +7,10 @@ const AUTO_REFRESH_INTERVAL_IN_SECONDS = Number(
 
 type Props = {
   onRefresh: () => void;
+  style: React.CSSProperties;
 };
 
-export function AutoRefresh({ onRefresh: refresh }: Props) {
+export function AutoRefresh({ onRefresh: refresh, style }: Props) {
   const [time, setTime] = useState(AUTO_REFRESH_INTERVAL_IN_SECONDS);
 
   useEffect(() => {
@@ -29,5 +30,9 @@ export function AutoRefresh({ onRefresh: refresh }: Props) {
     };
   }, [refresh]);
 
-  return <div>{time > 0 ? time : "REFRESHING"}</div>;
+  return (
+    <div style={style} title={`Auto Refresh in ...`}>
+      {time > 0 ? time : "REFRESHING"}
+    </div>
+  );
 }

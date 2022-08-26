@@ -2,6 +2,7 @@ import React from "react";
 import { AccessTokenInputModal } from "./AccessTokenInputModal";
 import { CommitsList } from "./CommitsList";
 import { ERRORS } from "./constants/errors";
+import { Header } from "./Header";
 import { useAccessToken } from "./hooks/useAccessToken";
 import { useCommits } from "./hooks/useCommits";
 import { InvalidTokenError } from "./InvalidTokenError";
@@ -26,11 +27,14 @@ function App() {
   } else {
     // this code branch means everything is fine, we just show commits
     return (
-      <CommitsList
-        commits={commits}
-        removeAccessToken={removeAccessToken}
-        onRefresh={refresh}
-      />
+      <>
+        <Header refresh={refresh} removeAccessToken={removeAccessToken} />
+        <CommitsList
+          commits={commits}
+          removeAccessToken={removeAccessToken}
+          onRefresh={refresh}
+        />
+      </>
     );
   }
 }

@@ -1,6 +1,4 @@
-import { AutoRefresh } from "./AutoRefresh";
 import { Commit } from "./Commit";
-import { ButtonWithKeyIcon } from "./RemoveMyAccessKeyButton";
 import { T_Commit } from "./types";
 
 type Props = {
@@ -15,14 +13,10 @@ export function CommitsList({
   onRefresh: refresh,
 }: Props) {
   return (
-    <div>
-      <button onClick={refresh}>refresh</button>
-      <AutoRefresh onRefresh={refresh} />
+    <>
       {commits.map((commit) => (
         <Commit key={commit.sha} commit={commit} />
       ))}
-
-      <ButtonWithKeyIcon onClick={removeAccessToken} />
-    </div>
+    </>
   );
 }
