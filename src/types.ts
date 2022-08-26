@@ -1,4 +1,6 @@
-export type T_Commit = {
+import { Object } from "ts-toolbelt";
+
+export type T_GitHub_Commit = {
   url: string;
   sha: string;
   node_id: string;
@@ -8,11 +10,23 @@ export type T_Commit = {
     url: string;
     message: string;
     author: {
-      name?: string | undefined;
-      email?: string | undefined;
-      date?: Date | undefined;
+      name?: string;
+      email?: string;
+      date?: string;
     } | null;
-    verification?: {} | undefined;
+    verification?: {};
   };
-  files?: {}[] | undefined;
+  files?: {}[];
 };
+
+export type T_Commit = Object.Merge<
+  T_GitHub_Commit,
+  {
+    commit: {
+      author: {
+        date?: Date;
+      };
+    };
+  },
+  "deep"
+>;

@@ -24,7 +24,7 @@ export function Commit({ commit }: Props) {
     <Wrapper>
       <h3 style={{ marginBottom: 0 }}>{commitMessage}</h3>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <DateDisplay date={commitDate} />
+        <DateDisplay date={new Date(commitDate)} />
         &nbsp;
         <span> by </span>
         &nbsp;
