@@ -1,6 +1,6 @@
 # Insided Assessment
 
-This repository shows the commit history if its own!
+This repository shows the commit history of its own!
 
 # To see the result
 
@@ -43,7 +43,8 @@ You can:
   conflicts won't appear because of non-logical/non-business reasons
 - We would calculate dates on the server instead of relying on the client-side,
   or at least pass server date to the client
-- We would have pagination instead of loading all commits at once
+- We would have pagination instead of loading all commits or only part of
+  commits
 - We could provide a way to let the user be able to change the repository to
   show commits
 - We would set up more beautiful error handling pages (use the internet for
