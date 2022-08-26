@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { AutoRefresh } from "./AutoRefresh";
-import { ButtonWithKeyIcon } from "./RemoveMyAccessKeyButton";
 import refreshIcon from "../icons/refresh.png";
+import keyIcon from "../icons/key.png";
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,7 +35,12 @@ export function Header({ onRefresh: refresh, removeAccessToken }: Props) {
           onRefresh={refresh}
         />
       </div>
-      <ButtonWithKeyIcon onClick={removeAccessToken} />
+      <button
+        onClick={removeAccessToken}
+        title="Remove GitHub Access Token key"
+      >
+        <img width={32} height={32} src={keyIcon} alt="Key" />
+      </button>
     </Wrapper>
   );
 }
