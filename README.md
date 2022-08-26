@@ -21,8 +21,5 @@
 
 TODO:
 
-- Add refresh button
-- Add countdown for auto-refresh
 - Show human-readable dates (like 2 minutes ago)
-- Handle loading state as well
 
