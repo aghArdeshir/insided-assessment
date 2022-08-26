@@ -13,7 +13,26 @@ const MoadlBackdrop = styled.div`
   align-items: center;
 `;
 
-const ModalContent = styled.dialog``; // TODO: to be styled later
+const Form = styled.form`
+  font-size: 16px;
+
+  & input {
+    font-size: inherit;
+  }
+
+  & input[type="text"] {
+    min-width: 200px;
+    padding: 10px;
+  }
+
+  & input[type="submit"] {
+    margin-top: 10px;
+  }
+`;
+
+const ModalContent = styled.dialog`
+  padding: 50px;
+`;
 
 type Props = {
   onSubmit: (accessToken: string) => void;
@@ -34,15 +53,16 @@ export function AccessTokenInputModal({ onSubmit }: Props) {
   return (
     <MoadlBackdrop>
       <ModalContent open>
-        <form onSubmit={onFormSubmit}>
+        <Form onSubmit={onFormSubmit}>
           <input
             autoFocus
+            type="text"
             placeholder="GitHub Access Token key"
             onChange={(e) => setValue(e.target.value)}
-            style={{ minWidth: 200, fontSize: 16, padding: 10 }}
           />
-          <input type="submit" hidden />
-        </form>
+          <br />
+          <input disabled={!value} type="submit" />
+        </Form>
       </ModalContent>
     </MoadlBackdrop>
   );
