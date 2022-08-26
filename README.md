@@ -1,3 +1,15 @@
+# Insided Assessment
+This repository shows the commit history if its own!
+
+# To see the result
+You can:
+
+- open https://aghardeshir.github.io/insided-assessment/
+- or do `npm i ; npm start`
+- or do `npm i ; npm run build ; cd build ; npx serve`
+
+# NOTES
+
 - I chose `create-react-app` as I'm familiar with it and it is easy-to-setup and
   always have been my go-to for rapid prototyping of React apps
 - I installed `octokit` instead of `@octokit/core` which was recommended in
