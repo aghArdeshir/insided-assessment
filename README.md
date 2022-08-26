@@ -16,3 +16,12 @@
 - I did not do full-blown error handling, but just a little for demonstration
   purposes. Try adding invalid access token key
 - I used inline styles here and there exactly for no reason!
+- I did not use routing as the application did not need it. I just used a
+  state-machine-like thing
+
+TODO:
+
+- Clean up App.tsx
+- Add refresh button
+- Add countdown for auto-refresh
+- Show human-readable dates (like 2 minutes ago)

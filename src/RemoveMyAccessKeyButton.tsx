@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import keyIcon from "./key.png";
+import keyIcon from "./icons/key.png";
 
 type Props = {
   onClick: () => void;
