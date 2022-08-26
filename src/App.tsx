@@ -29,7 +29,7 @@ function App() {
     // this code branch means everything is fine, we just show commits
     return (
       <>
-        <Header refresh={refresh} removeAccessToken={removeAccessToken} />
+        <Header onRefresh={refresh} removeAccessToken={removeAccessToken} />
         <CommitsList
           commits={commits}
           removeAccessToken={removeAccessToken}

@@ -20,10 +20,10 @@ const Wrapper = styled.div`
 
 type Props = {
   removeAccessToken: () => void;
-  refresh: () => void;
+  onRefresh: () => void;
 };
 
-export function Header({ refresh, removeAccessToken }: Props) {
+export function Header({ onRefresh: refresh, removeAccessToken }: Props) {
   return (
     <Wrapper>
       <div style={{ display: "flex", alignItems: "center" }}>
