@@ -6,6 +6,7 @@ import { Header } from "./Header";
 import { useAccessToken } from "./hooks/useAccessToken";
 import { useCommits } from "./hooks/useCommits";
 import { InvalidTokenError } from "./InvalidTokenError";
+import { Loading } from "./Loading";
 import { UnknownError } from "./UnknownError";
 
 function App() {
@@ -23,18 +24,18 @@ function App() {
   } else if (unknownError) {
     return <UnknownError removeAccessToken={removeAccessToken} />;
   } else if (loading) {
-    return <h1>LOADING</h1>;
+    return <Loading />;
   } else {
     // this code branch means everything is fine, we just show commits
     return (
-      <div style={{ backgroundColor: "darkgray" }}>
+      <>
         <Header refresh={refresh} removeAccessToken={removeAccessToken} />
         <CommitsList
           commits={commits}
           removeAccessToken={removeAccessToken}
           onRefresh={refresh}
         />
-      </div>
+      </>
     );
   }
 }

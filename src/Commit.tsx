@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   font-size: 14px;
   padding: 20px;
   margin: 20px;
-  border: 1px solid darkgray;
   border-radius: 5px;
 `;
 
