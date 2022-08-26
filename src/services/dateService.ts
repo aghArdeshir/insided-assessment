@@ -3,7 +3,7 @@ const SECONDS_IN_MINUTE = 60;
 const MINUTES_IN_HOUR = 60;
 const HOURS_IN_DAY = 24;
 
-export function humanReadableDate(date: Date) {
+export function getHumanReadableDate(date: Date) {
   const intervalInMilliSeconds = new Date().getTime() - date.getTime();
   const intervalInSeconds = Math.floor(intervalInMilliSeconds / ONE_SECOND);
   const intervalInMinutes = Math.floor(intervalInSeconds / SECONDS_IN_MINUTE);
