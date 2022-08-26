@@ -1,6 +1,6 @@
 import React from "react";
 import { AccessTokenInputModal } from "./AccessTokenInputModal";
-import { Commits } from "./Commits";
+import { CommitsList } from "./CommitsList";
 import { ERRORS } from "./constants/errors";
 import { useAccessToken } from "./hooks/useAccessToken";
 import { useCommits } from "./hooks/useCommits";
@@ -26,7 +26,7 @@ function App() {
   } else {
     // this code branch means everything is fine, we just show commits
     return (
-      <Commits
+      <CommitsList
         commits={commits}
         removeAccessToken={removeAccessToken}
         onRefresh={refresh}

@@ -8,7 +8,7 @@ type Props = {
   onRefresh: () => void;
 };
 
-export function Commits({
+export function CommitsList({
   commits,
   removeAccessToken,
   onRefresh: refresh,
