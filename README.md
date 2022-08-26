@@ -17,11 +17,12 @@
   purposes. Try adding invalid access token key
 - I used inline styles here and there exactly for no reason!
 - I did not use routing as the application did not need it. I just used a
-  state-machine-like thing
+  state-machine-like thing (bunch of if and else ifs to be honest)
 
 TODO:
 
-- Clean up App.tsx
 - Add refresh button
 - Add countdown for auto-refresh
 - Show human-readable dates (like 2 minutes ago)
+- Handle loading state as well
+
