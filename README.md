@@ -15,3 +15,4 @@
   care of it
 - I did not do full-blown error handling, but just a little for demonstration
   purposes. Try adding invalid access token key
+- I used inline styles here and there exactly for no reason!

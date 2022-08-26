@@ -1,5 +1,6 @@
 import React from "react";
 import { AccessTokenInputModal } from "./AccessTokenInputModal";
+import { Commit } from "./Commit";
 import { ERRORS } from "./constants/errors";
 import { useAccessToken } from "./hooks/useAccessToken";
 import { useCommits } from "./hooks/useCommits";
@@ -24,9 +25,10 @@ function App() {
   } else {
     return (
       <div>
-        {commits.map((commit) => {
-          return <h1 key={commit.sha}>Commit: {commit.sha}</h1>;
-        })}
+        {commits.map((commit) => (
+          <Commit key={commit.sha} commit={commit} />
+        ))}
+
         <ButtonWithKeyIcon onClick={removeAccessToken} />
       </div>
     );
