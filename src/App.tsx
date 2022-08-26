@@ -20,7 +20,7 @@ function App() {
   } else if (invalidTokenError) {
     return <InvalidTokenError removeAccessToken={removeAccessToken} />;
   } else if (unknownError) {
-    return <UnknownError />;
+    return <UnknownError removeAccessToken={removeAccessToken} />;
   } else if (loading) {
     return <h1>LOADING</h1>;
   } else {
