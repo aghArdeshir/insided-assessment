@@ -3,15 +3,9 @@ import { T_Commit } from "../types/types";
 
 type Props = {
   commits: T_Commit[];
-  removeAccessToken: () => void;
-  onRefresh: () => void;
 };
 
-export function CommitsList({
-  commits,
-  removeAccessToken,
-  onRefresh: refresh,
-}: Props) {
+export function CommitsList({ commits }: Props) {
   return (
     <>
       {commits.map((commit) => (

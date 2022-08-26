@@ -30,15 +30,10 @@ function App() {
     return (
       <>
         <Header onRefresh={refresh} removeAccessToken={removeAccessToken} />
-        <CommitsList
-          commits={commits}
-          removeAccessToken={removeAccessToken}
-          onRefresh={refresh}
-        />
+        <CommitsList commits={commits} />
       </>
     );
   }
 }
 
 export default App;
-
