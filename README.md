@@ -20,6 +20,7 @@
 - I did not use routing as the application did not need it. I just used a
   state-machine-like thing (a bunch of if and else ifs to be honest)
 - I relied on browser date just for simplicity
+- Every test present in the project is written with TDD approach
 
 # If it was a real-world actual product or I had more time:
 
