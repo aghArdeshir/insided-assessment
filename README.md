@@ -32,4 +32,8 @@
   show commits
 - We would set up more beautiful error handling pages (use the internet for
   inspiration or employ a UI/UX designer)
-
+- Would make the `getHumanReadableDate` much much more performant and more
+  logical (like distinguishing between 1 minute and 2 minute**s**)
+- We would have optimized icons and animations
+- I would have cleaned up the `useCommits` hook a little more
+- setup CI/CD to run tests or do some other cool stuff/checks
