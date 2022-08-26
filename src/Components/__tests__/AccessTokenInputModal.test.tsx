@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { AccessTokenInputModal } from "../Components/AccessTokenInputModal";
+import { AccessTokenInputModal } from "../AccessTokenInputModal";
 
 test("[a11y] opens a dialog", () => {
   render(<AccessTokenInputModal onSubmit={() => {}} />);
