@@ -23,9 +23,6 @@
 TODO:
 
 - Show human-readable dates (like 2 minutes ago)
-- Clean up that mapping mess occurred for mapping commits and move to a cool
-  clean test-driven service
-- import every time unit everywhere from dateService
 
 # If it was a real-world actual product:
 
@@ -34,4 +31,3 @@ TODO:
 - We would calculated dates on server instead of relying on client-side, or at
   least pass server date to client
 - We would have pagination instead of loading all commits at once
-
