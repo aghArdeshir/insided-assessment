@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   border-radius: 5px;
 `;
 
-const Date = styled.h5`
+const DateDisplay = styled.h5`
   color: #00000080;
 `;
 
@@ -27,7 +27,9 @@ export function Commit({ commit }: Props) {
     <Wrapper>
       <h3 style={{ marginBottom: 0 }}>{commitMessage}</h3>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Date>{commitDate}</Date>&nbsp;<span> by </span>&nbsp;
+        <DateDisplay>{commitDate}</DateDisplay>&nbsp;
+        <span> by </span>
+        &nbsp;
         <Author href={`https://github.com/${commitAuthorId}`} target="_blank">
           {commitAuthorId}
         </Author>
