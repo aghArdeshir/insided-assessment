@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const AUTO_REFRESH_INTERVAL_IN_SECONDS = Number(3);
+const AUTO_REFRESH_INTERVAL_IN_SECONDS = Number(
+  process.env.REACT_APP_AUTO_REFRESH_INTERVAL_IN_SECONDS
+);
 const ONE_SECOND = 1000;
 
 type Props = {
