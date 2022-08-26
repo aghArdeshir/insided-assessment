@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { humanReadableDate } from "./services/dateService";
+import { DateDisplay } from "./DateDisplay";
 import { T_Commit } from "./types";
 
 const Wrapper = styled.div`
@@ -9,10 +9,6 @@ const Wrapper = styled.div`
   margin: 20px;
   border: 1px solid darkgray;
   border-radius: 5px;
-`;
-
-const DateDisplay = styled.h5`
-  color: #00000080;
 `;
 
 const Author = styled.a``;
@@ -28,7 +24,8 @@ export function Commit({ commit }: Props) {
     <Wrapper>
       <h3 style={{ marginBottom: 0 }}>{commitMessage}</h3>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <DateDisplay>{humanReadableDate(commitDate)}</DateDisplay>&nbsp;
+        <DateDisplay date={commitDate} />
+        &nbsp;
         <span> by </span>
         &nbsp;
         <Author href={`https://github.com/${commitAuthorId}`} target="_blank">
