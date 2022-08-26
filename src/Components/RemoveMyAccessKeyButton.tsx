@@ -1,5 +1,5 @@
 import React from "react";
-import keyIcon from "./icons/key.png";
+import keyIcon from "../icons/key.png";
 
 type Props = {
   onClick: () => void;

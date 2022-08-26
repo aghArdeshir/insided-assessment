@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { fetchCommits } from "../services/fetchCmomits";
-import { T_Commit } from "../types";
+import { T_Commit } from "../types/types";
 
 export function useCommits(accessToken: string | null) {
   const [error, setError] = useState<any>();

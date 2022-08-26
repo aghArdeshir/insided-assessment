@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { DateDisplay } from "./DateDisplay";
-import { T_Commit } from "./types";
+import { T_Commit } from "../types/types";
 
 const Wrapper = styled.div`
   background-color: #0d1117;

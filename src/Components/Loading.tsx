@@ -1,7 +1,7 @@
 import Lottie from "lottie-web";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
-import loadingAnimation from "./icons/loading-animation-blue.json";
+import loadingAnimation from "../icons/loading-animation-blue.json";
 
 const Wrapper = styled.div`
   display: flex;

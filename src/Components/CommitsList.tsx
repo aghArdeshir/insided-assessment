@@ -1,5 +1,5 @@
 import { Commit } from "./Commit";
-import { T_Commit } from "./types";
+import { T_Commit } from "../types/types";
 
 type Props = {
   commits: T_Commit[];

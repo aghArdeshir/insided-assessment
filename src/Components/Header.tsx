@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { AutoRefresh } from "./AutoRefresh";
 import { ButtonWithKeyIcon } from "./RemoveMyAccessKeyButton";
-import refreshIcon from "./icons/refresh.png";
+import refreshIcon from "../icons/refresh.png";
 
 const Wrapper = styled.div`
   display: flex;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getHumanReadableDate } from "./services/dateService";
-import { intervalService } from "./services/IntervalService";
+import { getHumanReadableDate } from "../services/dateService";
+import { intervalService } from "../services/IntervalService";
 
 type Props = { date: Date };
 

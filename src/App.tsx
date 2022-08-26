@@ -1,13 +1,13 @@
 import React from "react";
-import { AccessTokenInputModal } from "./AccessTokenInputModal";
-import { CommitsList } from "./CommitsList";
+import { AccessTokenInputModal } from "./Components/AccessTokenInputModal";
+import { CommitsList } from "./Components/CommitsList";
 import { ERRORS } from "./constants/errors";
-import { Header } from "./Header";
+import { Header } from "./Components/Header";
 import { useAccessToken } from "./hooks/useAccessToken";
 import { useCommits } from "./hooks/useCommits";
-import { InvalidTokenError } from "./InvalidTokenError";
-import { Loading } from "./Loading";
-import { UnknownError } from "./UnknownError";
+import { InvalidTokenError } from "./Components/InvalidTokenError";
+import { Loading } from "./Components/Loading";
+import { UnknownError } from "./Components/UnknownError";
 
 function App() {
   const { accessToken, setAccessToken, removeAccessToken } = useAccessToken();
