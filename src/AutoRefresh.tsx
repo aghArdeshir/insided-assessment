@@ -17,7 +17,6 @@ export function AutoRefresh({ onRefresh: refresh, style }: Props) {
     const intervalRef = setInterval(() => {
       setTime((time) => {
         if (time < 1) {
-          refresh();
           return AUTO_REFRESH_INTERVAL_IN_SECONDS;
         }
 
@@ -29,6 +28,12 @@ export function AutoRefresh({ onRefresh: refresh, style }: Props) {
       clearInterval(intervalRef);
     };
   }, [refresh]);
+
+  useEffect(() => {
+    if (time < 1) {
+      refresh();
+    }
+  }, [refresh, time]);
 
   return (
     <div style={style} title={`Auto Refresh in ...`}>
