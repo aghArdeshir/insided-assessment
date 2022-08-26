@@ -18,6 +18,7 @@
 - I used inline styles here and there exactly for no reason!
 - I did not use routing as the application did not need it. I just used a
   state-machine-like thing (bunch of if and else ifs to be honest)
+- I relied on browser date just for simplicity
 
 TODO:
 
@@ -27,4 +28,6 @@ TODO:
 
 - I would definitely set up prettier and eslint with customized rules so
   conflicts won't appear because of non-logical/non-business reasons
-
+- We would calculated dates on server instead of relying on client-side, or at
+  least pass server date to client
+- We would have pagination instead of loading all commits at once

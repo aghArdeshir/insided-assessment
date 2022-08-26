@@ -10,7 +10,7 @@ export type T_Commit = {
     author: {
       name?: string | undefined;
       email?: string | undefined;
-      date?: string | undefined;
+      date?: Date | undefined;
     } | null;
     verification?: {} | undefined;
   };

@@ -15,7 +15,18 @@ export async function fetchCommits() {
         owner: "aghArdeshir",
         repo: "insided-assessment",
       })
-    ).data;
+    ).data.map((commit) => {
+      return {
+        ...commit,
+        commit: {
+          ...commit.commit,
+          author: {
+            ...commit.commit.author,
+            date: new Date(commit.commit.author?.date || ""),
+          },
+        },
+      };
+    });
   } catch (e: any) {
     if (e.status === 401) {
       throw ERRORS.INVALID_TOKEN;
