@@ -9,7 +9,7 @@ import { UnknownError } from "./UnknownError";
 
 function App() {
   const { accessToken, setAccessToken, removeAccessToken } = useAccessToken();
-  const { commits, error } = useCommits(accessToken);
+  const { commits, error, refresh } = useCommits(accessToken);
 
   const noAccessToken = !accessToken;
   const invalidTokenError = error === ERRORS.INVALID_TOKEN;
@@ -25,7 +25,13 @@ function App() {
   // TODO: else if loading
   else {
     // this code branch means everything is fine
-    return <Commits commits={commits} removeAccessToken={removeAccessToken} />;
+    return (
+      <Commits
+        commits={commits}
+        removeAccessToken={removeAccessToken}
+        onRefresh={refresh}
+      />
+    );
   }
 }
 

@@ -5,11 +5,17 @@ import { T_Commit } from "./types";
 type Props = {
   commits: T_Commit[];
   removeAccessToken: () => void;
+  onRefresh: () => void;
 };
 
-export function Commits({ commits, removeAccessToken }: Props) {
+export function Commits({
+  commits,
+  removeAccessToken,
+  onRefresh: refresh,
+}: Props) {
   return (
     <div>
+      <button onClick={refresh}>refresh</button>
       {commits.map((commit) => (
         <Commit key={commit.sha} commit={commit} />
       ))}
