@@ -1,7 +1,9 @@
 # Insided Assessment
+
 This repository shows the commit history if its own!
 
 # To see the result
+
 You can:
 
 - open https://aghardeshir.github.io/insided-assessment/
@@ -33,6 +35,7 @@ You can:
   state-machine-like thing (a bunch of if and else ifs to be honest)
 - I relied on browser date just for simplicity
 - Every test present in the project is written with TDD approach
+- Time devoted is between 3 & 4 hours
 
 # If it was a real-world actual product or I had more time:
 
