@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { humanReadableDate } from "./services/dateService";
 import { T_Commit } from "./types";
 
 const Wrapper = styled.div`
@@ -20,14 +21,14 @@ type Props = { commit: T_Commit };
 
 export function Commit({ commit }: Props) {
   const commitAuthorId = commit.commit.author?.name;
-  const commitDate = commit.commit.author?.date;
+  const commitDate = new Date(commit.commit.author?.date || "");
   const commitMessage = commit.commit.message;
 
   return (
     <Wrapper>
       <h3 style={{ marginBottom: 0 }}>{commitMessage}</h3>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <DateDisplay>{commitDate}</DateDisplay>&nbsp;
+        <DateDisplay>{humanReadableDate(commitDate)}</DateDisplay>&nbsp;
         <span> by </span>
         &nbsp;
         <Author href={`https://github.com/${commitAuthorId}`} target="_blank">
