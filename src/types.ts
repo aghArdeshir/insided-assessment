@@ -6,6 +6,9 @@ export type T_GitHub_Commit = {
   node_id: string;
   html_url: string;
   comments_url: string;
+  author?: {
+    avatar_url: string;
+  } | null;
   commit: {
     url: string;
     message: string;

@@ -27,14 +27,14 @@ function App() {
   } else {
     // this code branch means everything is fine, we just show commits
     return (
-      <>
+      <div style={{ backgroundColor: "darkgray" }}>
         <Header refresh={refresh} removeAccessToken={removeAccessToken} />
         <CommitsList
           commits={commits}
           removeAccessToken={removeAccessToken}
           onRefresh={refresh}
         />
-      </>
+      </div>
     );
   }
 }
