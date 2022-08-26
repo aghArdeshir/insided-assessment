@@ -23,3 +23,8 @@ TODO:
 
 - Show human-readable dates (like 2 minutes ago)
 
+# If it was a real-world actual product:
+
+- I would definitely set up prettier and eslint with customized rules so
+  conflicts won't appear because of non-logical/non-business reasons
+
