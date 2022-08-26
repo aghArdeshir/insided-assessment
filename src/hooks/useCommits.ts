@@ -5,8 +5,11 @@ import { T_Commit } from "../types";
 export function useCommits(accessToken: string | null) {
   const [error, setError] = useState<any>();
   const [commits, setCommits] = useState<T_Commit[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const _fetchCommits = useCallback(async () => {
+    setLoading(true);
+
     setError(undefined);
     setCommits([]);
 
@@ -15,6 +18,8 @@ export function useCommits(accessToken: string | null) {
     } catch (e) {
       setError(e);
     }
+
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -28,5 +33,5 @@ export function useCommits(accessToken: string | null) {
     }
   }, [_fetchCommits, accessToken]);
 
-  return { commits, error, refresh: _fetchCommits };
+  return { commits, error, refresh: _fetchCommits, loading };
 }
